@@ -1,0 +1,562 @@
+<!--
+  Meta description suggestion (not part of visible content):
+  Compare every AMD processor price in India by tier: budget APUs, Ryzen 5, Ryzen 7
+  and Ryzen 9. Real specs, current stock and prices from Avika Retails, Nehru Place.
+
+  Paste this whole block into the Elementor HTML widget on the page.
+  Add the page H1 separately in Elementor as: "AMD Processors in India: Ryzen 5,
+  Ryzen 7 & APU Price Guide"
+-->
+<div class="avk-amd-in-india-guide">
+<style>
+.avk-amd-in-india-guide{
+  --ink:#12181F;
+  --ink-soft:#1E2733;
+  --blue:#1857A4;
+  --blue-dark:#0E3E78;
+  --amber:#F5A623;
+  --red:#D62828;
+  --red-dark:#A81E1E;
+  --paper:#FFFFFF;
+  --paper-soft:#F5F7FA;
+  --text:#1B2430;
+  --text-soft:#4B5563;
+  --border:#E2E6EB;
+  --radius:14px;
+  color:var(--text);
+  line-height:1.65;
+  font-size:17px;
+}
+.avk-amd-in-india-guide p{margin:0 0 20px;}
+.avk-amd-in-india-guide h2{
+  font-size:1.5em;
+  line-height:1.3;
+  margin:44px 0 16px;
+  color:var(--ink);
+}
+.avk-amd-in-india-guide h3{
+  font-size:1.15em;
+  margin:0 0 8px;
+  color:var(--ink);
+}
+.avk-amd-in-india-guide a{color:var(--blue); text-decoration:underline;}
+.avk-amd-in-india-guide a:hover{color:var(--blue-dark);}
+
+/* Direct-answer callout blocks for AI/PAA style questions */
+.avk-answer-block{
+  background:var(--paper-soft);
+  border-left:4px solid var(--blue);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:20px 24px;
+  margin:24px 0 36px;
+}
+.avk-answer-block h2{margin:0 0 10px; font-size:1.3em;}
+.avk-answer-block p{margin:0; color:var(--text-soft);}
+
+/* Tier eyebrow labels above each pick heading */
+.avk-eyebrow{
+  display:inline-block;
+  font-size:0.72em;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+.avk-eyebrow.am4{background:#FFF3DE; color:#8A5A00;}
+.avk-eyebrow.am5{background:#E7F0FA; color:var(--blue-dark);}
+.avk-eyebrow.igpu{background:#EDEEF1; color:var(--ink-soft);}
+
+/* Product card: image + spec pills */
+.avk-product-card{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+  margin:14px 0 22px;
+  background:var(--paper);
+}
+.avk-product-card img{
+  width:160px;
+  height:160px;
+  object-fit:contain;
+  background:var(--paper-soft);
+  border-radius:10px;
+  flex-shrink:0;
+}
+.avk-product-card .avk-product-body{flex:1; min-width:220px;}
+.avk-product-card .avk-price{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:1.1em;
+  font-weight:700;
+  color:var(--ink);
+  margin-bottom:8px;
+  display:block;
+}
+.avk-spec-pills{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 14px;}
+.avk-spec-pills span{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:0.82em;
+  background:var(--paper-soft);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:4px 12px;
+  color:var(--text-soft);
+}
+.avk-product-card .avk-buy-link{
+  display:inline-block;
+  font-weight:600;
+  font-size:0.95em;
+  margin-top:4px;
+}
+
+/* Plain linked list for "more options" section */
+.avk-amd-in-india-guide ul.avk-more-list{margin:0 0 22px; padding-left:20px;}
+.avk-amd-in-india-guide ul.avk-more-list li{margin-bottom:10px; color:var(--text-soft);}
+
+/* Tables */
+.avk-table-wrap{overflow-x:auto; margin:18px 0 26px; border:1px solid var(--border); border-radius:var(--radius);}
+.avk-amd-in-india-guide table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:520px;
+  font-size:0.95em;
+}
+.avk-amd-in-india-guide th{
+  text-align:left;
+  background:var(--ink);
+  color:#fff;
+  font-size:0.78em;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  padding:12px 16px;
+}
+.avk-amd-in-india-guide td{
+  padding:12px 16px;
+  border-top:1px solid var(--border);
+  vertical-align:top;
+}
+.avk-amd-in-india-guide tr:nth-child(even) td{background:var(--paper-soft);}
+
+/* CTA blocks */
+.avk-cta{
+  background:var(--ink);
+  color:#fff;
+  border-radius:var(--radius);
+  padding:28px 30px;
+  margin:34px 0;
+}
+.avk-cta .avk-cta-label{
+  display:inline-block;
+  background:var(--amber);
+  color:var(--ink);
+  font-size:0.7em;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:12px;
+}
+.avk-cta h3{color:#fff; font-size:1.25em; margin-bottom:8px;}
+.avk-cta p{color:#C7D0DB; margin-bottom:18px; max-width:620px;}
+.avk-cta .avk-btn-row{display:flex; gap:14px; flex-wrap:wrap;}
+.avk-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--red);
+  color:#fff !important;
+  font-weight:600;
+  text-decoration:none !important;
+  padding:12px 22px;
+  border-radius:8px;
+  transition:background 0.15s ease;
+}
+.avk-btn:hover{background:var(--red-dark); color:#fff !important;}
+
+/* FAQ accordion */
+details.avk-faq-item{
+  border-top:1px solid var(--border);
+  padding:6px 0;
+}
+details.avk-faq-item:first-of-type{border-top:none;}
+details.avk-faq-item summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  font-weight:600;
+  font-size:1.05em;
+  color:var(--ink);
+  padding:14px 0;
+}
+details.avk-faq-item summary::-webkit-details-marker{display:none;}
+details.avk-faq-item summary::after{
+  content:"+";
+  font-size:1.4em;
+  line-height:1;
+  color:var(--red);
+  flex-shrink:0;
+}
+details.avk-faq-item[open] summary::after{content:"\2212";}
+details.avk-faq-item[open] summary{padding-bottom:6px;}
+details.avk-faq-item p{margin:0 0 16px; color:var(--text-soft);}
+
+@media (max-width:640px){
+  .avk-amd-in-india-guide{font-size:16px;}
+  .avk-product-card{flex-direction:column;}
+  .avk-product-card img{width:100%; height:auto; max-height:200px;}
+  .avk-cta{padding:22px;}
+  .avk-cta .avk-btn-row{flex-direction:column;}
+  .avk-btn{justify-content:center;}
+}
+</style>
+
+<p>Shopping for an amd processor in India means choosing from one of the widest CPU lineups on the market, which is why the amd processor price in india can swing from under ₹6,000 for a basic APU to well past ₹40,000 for a flagship Ryzen 9. This guide lays out the full Ryzen range sold at Avika Retails, sorted by tier, so you can match a chip to your budget and your build. Whether you want to buy an amd processor online for a first gaming PC or upgrade an older AM4 board, the price and spec of every amd processor below come from current Avika Retails stock, not list prices.</p>
+
+<p>AMD splits its desktop line into four broad tiers: budget APUs like the amd ryzen 5 5600g with built-in Radeon graphics, mainstream Ryzen 5 six-core chips, higher-core Ryzen 7 eights, and high-end Ryzen 9 twelve-core parts plus the X3D gaming specialists. If you would rather check an amd processor near me before buying, our Nehru Place store keeps most of these in stock, and you can see each chip's current price on its own product page. Below we break down what each tier does best and which specific chip makes sense at each price.</p>
+
+<div class="avk-answer-block">
+<h2>Which AMD processor should you buy in India?</h2>
+<p>For most builders the Ryzen 5 5600 at ₹12,499 is the value sweet spot: 6 cores, 12 threads and strong 1080p and 1440p gaming on the cheaper AM4 platform. If you want built-in graphics with no separate GPU, the Ryzen 5 8500G at ₹14,799 is the pick, and for high-refresh gaming the Ryzen 7 7800X3D at ₹31,999 is the fastest reasonable choice here.</p>
+</div>
+
+<h2>AMD processor price in India: full range at a glance</h2>
+
+<p>The Ryzen desktop lineup runs across two sockets. AM4 uses cheaper DDR4 memory and B450/B550 boards and covers the Ryzen 3, Ryzen 5 5000 and Ryzen 7 5000 chips. AM5 needs DDR5 and a newer board but gives you a longer upgrade path, and it covers the Ryzen 7000, 8000 and 9000 series. Here is the whole range Avika stocks, from cheapest APU to the twelve-core flagship, so you can jump straight to your budget tier.</p>
+
+<div class="avk-table-wrap">
+<table>
+<thead>
+<tr><th>Tier</th><th>Processor</th><th>Socket</th><th>Cores/threads</th><th>iGPU</th><th>Price in India</th></tr>
+</thead>
+<tbody>
+<tr><td>Budget APU</td><td><a href="https://avikaretails.com/product/amd-ryzen-3-3200g-processor-4-cores-am4/">Ryzen 3 3200G</a></td><td>AM4</td><td>4/4</td><td>Yes (Vega)</td><td>₹5,499</td></tr>
+<tr><td>Budget APU</td><td><a href="https://avikaretails.com/product/amd-ryzen-5-3400g-processor/">Ryzen 5 3400G</a></td><td>AM4</td><td>4/8</td><td>Yes (Vega)</td><td>₹7,599</td></tr>
+<tr><td>Budget APU</td><td><a href="https://avikaretails.com/product/amd-ryzen-5-5600gt-6-core-processor/">Ryzen 5 5600GT</a></td><td>AM4</td><td>6/12</td><td>Yes (Vega)</td><td>₹15,999</td></tr>
+<tr><td>Ryzen 5</td><td><a href="https://avikaretails.com/product/amd-ryzen-5-5600-desktop-cpu-6-core-am4/">Ryzen 5 5600</a></td><td>AM4</td><td>6/12</td><td>No</td><td>₹12,499</td></tr>
+<tr><td>Ryzen 5</td><td><a href="https://avikaretails.com/product/amd-ryzen-5-7500f-desktop-processor/">Ryzen 5 7500F</a></td><td>AM5</td><td>6/12</td><td>No</td><td>₹14,389</td></tr>
+<tr><td>Ryzen 5</td><td><a href="https://avikaretails.com/product/amd-ryzen-5-8500g-processor-6-core-am5/">Ryzen 5 8500G</a></td><td>AM5</td><td>6/12</td><td>Yes (740M)</td><td>₹14,799</td></tr>
+<tr><td>Ryzen 5</td><td><a href="https://avikaretails.com/product/amd-ryzen-5-9600x-desktop-processor/">Ryzen 5 9600X</a></td><td>AM5</td><td>6/12</td><td>No</td><td>₹19,299</td></tr>
+<tr><td>Ryzen 7</td><td><a href="https://avikaretails.com/product/amd-ryzen-7-5700x-processor-8-core-am4/">Ryzen 7 5700X</a></td><td>AM4</td><td>8/16</td><td>No</td><td>₹15,999</td></tr>
+<tr><td>Ryzen 7</td><td><a href="https://avikaretails.com/product/amd-ryzen-7-9700x-8-core-processor/">Ryzen 7 9700X</a></td><td>AM5</td><td>8/16</td><td>No</td><td>₹24,599</td></tr>
+<tr><td>Ryzen 7</td><td><a href="https://avikaretails.com/product/amd-ryzen-7-8700g-processor-8-core/">Ryzen 7 8700G</a></td><td>AM5</td><td>8/16</td><td>Yes (780M)</td><td>₹27,699</td></tr>
+<tr><td>X3D gaming</td><td><a href="https://avikaretails.com/product/amd-ryzen-7-7800x3d-desktop-processor/">Ryzen 7 7800X3D</a></td><td>AM5</td><td>8/16</td><td>No</td><td>₹31,999</td></tr>
+<tr><td>Ryzen 9</td><td><a href="https://avikaretails.com/product/amd-ryzen-9-7900x-processor-12-cores-24-thread/">Ryzen 9 7900X</a></td><td>AM5</td><td>12/24</td><td>No</td><td>₹33,999</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Budget APUs: Ryzen with built-in graphics</h2>
+
+<p>An APU is an amd processor with Radeon graphics baked in, so it drives a display and plays light games without a separate graphics card. This is the cheapest way to a working PC, and a common starting point before adding a GPU later.</p>
+
+<span class="avk-eyebrow igpu">Cheapest entry</span>
+<h3>AMD Ryzen 3 3200G</h3>
+<p>At ₹5,499 the 3200G is the lowest-cost way into a Ryzen desktop. It is a 4-core AM4 chip with Vega graphics, fine for browsing, office work, HTPC duty and older or esports titles at low settings. Pair it with an inexpensive B450 board and you have a complete system for very little.</p>
+<div class="avk-product-card">
+  <img src="https://avikaretails.com/wp-content/uploads/2025/10/3200g-1.jpg" alt="AMD Ryzen 3 3200G budget APU with Vega graphics for AM4" loading="lazy">
+  <div class="avk-product-body">
+    <span class="avk-price">₹5,499</span>
+    <div class="avk-spec-pills">
+      <span>4 cores</span>
+      <span>AM4</span>
+      <span>Vega iGPU</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-3-3200g-processor-4-cores-am4/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow igpu">Popular APU</span>
+<h3>AMD Ryzen 5 3400G</h3>
+<p>At ₹7,599 the 3400G steps up to 4 cores and 8 threads with a stronger Vega 11 iGPU, which handles light 1080p gaming better than the 3200G. It stays a great value APU for a budget family or office build on AM4.</p>
+<div class="avk-product-card">
+  <img src="https://avikaretails.com/wp-content/uploads/2025/10/3400G.jpg" alt="AMD Ryzen 5 3400G APU with Vega 11 graphics for AM4" loading="lazy">
+  <div class="avk-product-body">
+    <span class="avk-price">₹7,599</span>
+    <div class="avk-spec-pills">
+      <span>4 cores / 8 threads</span>
+      <span>AM4</span>
+      <span>Vega 11 iGPU</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-5-3400g-processor/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow igpu">6-core APU</span>
+<h3>AMD Ryzen 5 5600G / 5600GT</h3>
+<p>The amd ryzen 5 5600g is the classic 6-core, 12-thread AM4 APU with Vega 7 graphics, strong enough for smooth 1080p esports without a GPU. It sells fast and is currently out of stock, so the in-stock buy today is the near-identical Ryzen 5 5600GT at ₹15,999, which is the same idea with slightly higher clocks. For a full breakdown of the chip, see our <a href="https://avikaretails.com/amd-ryzen-5-5600g-review/">AMD Ryzen 5 5600G review</a>.</p>
+<div class="avk-product-card">
+  <div class="avk-product-body">
+    <span class="avk-price">5600G ₹13,999 · 5600GT ₹15,999</span>
+    <div class="avk-spec-pills">
+      <span>6 cores / 12 threads</span>
+      <span>AM4</span>
+      <span>Vega iGPU</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-5-5600gt-6-core-processor/">Check the in-stock 5600GT →</a>
+  </div>
+</div>
+
+<h2>Mainstream Ryzen 5: the value core of the range</h2>
+
+<p>Ryzen 5 is where most gamers and everyday builders land. Six cores and twelve threads is still the sweet spot for 1080p and 1440p gaming in 2026, and this tier spans both the cheap AM4 platform and the newer AM5 socket.</p>
+
+<span class="avk-eyebrow am4">Best value</span>
+<h3>AMD Ryzen 5 5600</h3>
+<p>At ₹12,499 the Ryzen 5 5600 is the value benchmark of the entire lineup: 6 cores, 12 threads of Zen 3 on the mature AM4 platform, paired with cheap DDR4 and B550 boards. It has no iGPU, so plan for a graphics card, but for the money nothing else games this well.</p>
+<div class="avk-product-card">
+  <img src="https://avikaretails.com/wp-content/uploads/2025/10/Ryzen-5-5600-1.jpg" alt="AMD Ryzen 5 5600 desktop processor, best value AMD processor for gaming" loading="lazy">
+  <div class="avk-product-body">
+    <span class="avk-price">₹12,499</span>
+    <div class="avk-spec-pills">
+      <span>6 cores / 12 threads</span>
+      <span>AM4, Zen 3</span>
+      <span>65W TDP</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-5-5600-desktop-cpu-6-core-am4/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow am5">Best AM5 entry</span>
+<h3>AMD Ryzen 5 7500F</h3>
+<p>At ₹14,389 the 7500F is the cheapest door into AM5. It is a 6-core, 12-thread Zen 4 chip with DDR5 and PCIe 5.0 support and a bundled cooler, and it beats the older 5600 in gaming while setting you up for future AM5 CPU upgrades. No integrated graphics, so a discrete GPU is required.</p>
+<div class="avk-product-card">
+  <img src="https://avikaretails.com/wp-content/uploads/2025/09/AMD-Ryzen-5-7500F-Processor.webp" alt="AMD Ryzen 5 7500F Zen 4 processor for AM5" loading="lazy">
+  <div class="avk-product-body">
+    <span class="avk-price">₹14,389</span>
+    <div class="avk-spec-pills">
+      <span>6 cores / 12 threads</span>
+      <span>AM5, Zen 4</span>
+      <span>DDR5, PCIe 5.0</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-5-7500f-desktop-processor/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow igpu">AM5 with graphics</span>
+<h3>AMD Ryzen 5 8500G</h3>
+<p>At ₹14,799 the 8500G is the cheapest way to get AM5, DDR5 and built-in Radeon 740M graphics in one chip, so the system runs with no GPU installed. Handy if you want to build now and add a graphics card later, though the PCIe slot runs at x4, worth knowing before pairing a high-end card.</p>
+<div class="avk-product-card">
+  <img src="https://avikaretails.com/wp-content/uploads/2025/09/AMD-Ryzen-5-8500G-Processor-1.jpg" alt="AMD Ryzen 5 8500G processor with Radeon 740M graphics for AM5" loading="lazy">
+  <div class="avk-product-body">
+    <span class="avk-price">₹14,799</span>
+    <div class="avk-spec-pills">
+      <span>6 cores / 12 threads</span>
+      <span>AM5, Zen 4</span>
+      <span>Radeon 740M iGPU</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-5-8500g-processor-6-core-am5/">Check current price and stock →</a>
+  </div>
+</div>
+
+<div class="avk-cta">
+  <span class="avk-cta-label">Buy now</span>
+  <h3>Browse the full AMD processor range</h3>
+  <p>Stock and pricing shift often across the Ryzen lineup. Check today's listing on every AMD processor before you decide, or buy an amd processor online for doorstep delivery.</p>
+  <div class="avk-btn-row">
+    <a class="avk-btn" href="https://avikaretails.com/product-category/processors/amd-processors/">Browse AMD processors →</a>
+  </div>
+</div>
+
+<h2>Ryzen 7: eight cores for gaming and creation</h2>
+
+<p>Ryzen 7 adds two more cores over Ryzen 5, which pays off in streaming, editing, rendering and heavy multitasking rather than pure frame rates. It runs from an affordable AM4 eight-core to the newest Zen 5 parts and the 8700G APU.</p>
+
+<span class="avk-eyebrow am4">Value 8-core</span>
+<h3>AMD Ryzen 7 5700X</h3>
+<p>At ₹15,999 the 5700X gives you 8 cores and 16 threads of efficient 65W Zen 3 on cheap AM4. It ships as a tray unit without a cooler, so budget an aftermarket one, but as a productivity upgrade over a Ryzen 5 it is hard to beat at this price.</p>
+<div class="avk-product-card">
+  <img src="https://avikaretails.com/wp-content/uploads/2025/10/5700g-1.jpg" alt="AMD Ryzen 7 5700X 8-core processor for AM4" loading="lazy">
+  <div class="avk-product-body">
+    <span class="avk-price">₹15,999</span>
+    <div class="avk-spec-pills">
+      <span>8 cores / 16 threads</span>
+      <span>AM4, Zen 3</span>
+      <span>Tray, no cooler</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-7-5700x-processor-8-core-am4/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow am5">Zen 5 8-core</span>
+<h3>AMD Ryzen 7 9700X</h3>
+<p>At ₹24,599 the 9700X is the current-generation Zen 5 eight-core, with strong single-thread speed and low power draw on AM5. It is a great all-round chip for a modern gaming and creator build that you plan to keep for years.</p>
+<div class="avk-product-card">
+  <div class="avk-product-body">
+    <span class="avk-price">₹24,599</span>
+    <div class="avk-spec-pills">
+      <span>8 cores / 16 threads</span>
+      <span>AM5, Zen 5</span>
+      <span>DDR5, PCIe 5.0</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-7-9700x-8-core-processor/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow igpu">Flagship APU</span>
+<h3>AMD Ryzen 7 8700G</h3>
+<p>At ₹27,699 the 8700G is the fastest desktop APU AMD makes, an 8-core Zen 4 chip with Radeon 780M graphics that genuinely plays many games at 1080p with no discrete GPU. It is the pick for a compact, GPU-free build where the integrated graphics do real work.</p>
+<div class="avk-product-card">
+  <div class="avk-product-body">
+    <span class="avk-price">₹27,699</span>
+    <div class="avk-spec-pills">
+      <span>8 cores / 16 threads</span>
+      <span>AM5, Zen 4</span>
+      <span>Radeon 780M iGPU</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-7-8700g-processor-8-core/">Check current price and stock →</a>
+  </div>
+</div>
+
+<div class="avk-answer-block">
+<h2>Which AMD processor is best for pure gaming?</h2>
+<p>The X3D chips. AMD's 3D V-Cache parts, the Ryzen 7 7800X3D at ₹31,999 and the newer Ryzen 7 9800X3D at ₹43,999, stack extra cache on the CPU that boosts frame rates in most games well beyond a standard Ryzen 7 or Ryzen 9. On AM4, the Ryzen 7 5800X3D at ₹35,999 does the same for older boards.</p>
+</div>
+
+<h2>High-end: Ryzen 9 and the X3D gaming chips</h2>
+
+<p>At the top sit the twelve-core Ryzen 9 parts for heavy multi-threaded work and the X3D specialists tuned for maximum gaming frame rates. These are AM5, DDR5 builds aimed at creators, streamers and enthusiasts.</p>
+
+<span class="avk-eyebrow am5">Fastest gaming</span>
+<h3>AMD Ryzen 7 7800X3D</h3>
+<p>At ₹31,999 the 7800X3D remains the go-to high-refresh gaming CPU. Its 3D V-Cache lifts frame rates in cache-sensitive games above much pricier chips, while staying cool and efficient. For a pure gaming build on AM5, this is the one to beat.</p>
+<div class="avk-product-card">
+  <div class="avk-product-body">
+    <span class="avk-price">₹31,999</span>
+    <div class="avk-spec-pills">
+      <span>8 cores / 16 threads</span>
+      <span>AM5, 3D V-Cache</span>
+      <span>DDR5</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-7-7800x3d-desktop-processor/">Check current price and stock →</a>
+  </div>
+</div>
+
+<span class="avk-eyebrow am5">12-core workhorse</span>
+<h3>AMD Ryzen 9 7900X</h3>
+<p>At ₹33,999 the 7900X brings 12 cores and 24 threads for serious rendering, code compiles and multi-app workloads, while still gaming strongly. Step up to the Zen 5 <a href="https://avikaretails.com/product/amd-ryzen-9-9900x-12-core-processor-am5/">Ryzen 9 9900X</a> at ₹38,999 for the newest architecture in the same core count.</p>
+<div class="avk-product-card">
+  <div class="avk-product-body">
+    <span class="avk-price">₹33,999</span>
+    <div class="avk-spec-pills">
+      <span>12 cores / 24 threads</span>
+      <span>AM5, Zen 4</span>
+      <span>DDR5, PCIe 5.0</span>
+    </div>
+    <a class="avk-buy-link" href="https://avikaretails.com/product/amd-ryzen-9-7900x-processor-12-cores-24-thread/">Check current price and stock →</a>
+  </div>
+</div>
+
+<h2>More AMD processors worth checking</h2>
+
+<p>The picks above cover the main tiers, but the catalog runs deeper. Check current stock before ordering, since availability shifts often:</p>
+
+<ul class="avk-more-list">
+  <li><a href="https://avikaretails.com/product/amd-ryzen-5-5500-processor-6-core/">Ryzen 5 5500</a>, <a href="https://avikaretails.com/product/amd-ryzen-5-5500gt-6-core-processor/">Ryzen 5 5500GT</a> and <a href="https://avikaretails.com/product/amd-ryzen-5-3600-processor-6-core-cpu/">Ryzen 5 3600</a> sit below the 5600 for the tightest AM4 budgets.</li>
+  <li><a href="https://avikaretails.com/product/amd-ryzen-5-5600x-desktop-processor-am4/">Ryzen 5 5600X</a> and <a href="https://avikaretails.com/product/buy-amd-ryzen-5-7600x-desktop-processor/">Ryzen 5 7600X</a> are higher-clocked six-core options on AM4 and AM5 respectively.</li>
+  <li><a href="https://avikaretails.com/product/amd-ryzen-5-8600g-processor-6-core/">Ryzen 5 8600G</a> is a stronger AM5 APU than the 8500G if you want better integrated graphics.</li>
+  <li><a href="https://avikaretails.com/product/amd-ryzen-7-5700g-processor-am4/">Ryzen 7 5700G</a> is the 8-core AM4 APU, and the <a href="https://avikaretails.com/product/amd-ryzen-7-7700-processor-8-core/">Ryzen 7 7700</a> and <a href="https://avikaretails.com/product/amd-ryzen-7-7700x-desktop-processor-am5/">Ryzen 7 7700X</a> are the Zen 4 eight-cores between the 5700X and 9700X.</li>
+  <li>For the gaming halo, the AM4 <a href="https://avikaretails.com/product/amd-ryzen-7-5800x3d-processor/">Ryzen 7 5800X3D</a> and the flagship <a href="https://avikaretails.com/product/amd-ryzen-7-9800x3d-8-core-processor/">Ryzen 7 9800X3D</a> are the X3D chips above the 7800X3D.</li>
+</ul>
+
+<p>Building for gaming? Our guide to the <a href="https://avikaretails.com/best-amd-processor-under-20k/">best AMD processor under 20k</a> narrows this range down to the sub-₹20,000 sweet spot, and once you have picked a CPU you will want a matching card: see current <a href="https://avikaretails.com/amd-graphic-cards-price-in-india/">AMD graphic card prices in India</a> for the Radeon side of the build.</p>
+
+<div class="avk-answer-block">
+<h2>Is AMD better than Intel in 2026?</h2>
+<p>It depends on the job. AMD leads on gaming value, especially with the X3D chips, and on long platform support since AM5 will take several more CPU generations. Intel can edge ahead in some productivity tasks at a given price. Our full <a href="https://avikaretails.com/intel-vs-amd-which-processor-is-better-for-you/">Intel vs AMD breakdown</a> and the <a href="https://avikaretails.com/intel-processors-price-in-india/">Intel processor price list for India</a> cover the other side directly.</p>
+</div>
+
+<div class="avk-cta">
+  <span class="avk-cta-label">Payment options</span>
+  <h3>Spread the cost with EMI</h3>
+  <p>Going for a Ryzen 7 or Ryzen 9 build? Pay over months instead of all at once with Bajaj EMI.</p>
+  <div class="avk-btn-row">
+    <a class="avk-btn" href="https://avikaretails.com/buy-computer-on-bajaj-emi/">See EMI options →</a>
+  </div>
+</div>
+
+<h2>Buying an AMD processor in Delhi</h2>
+
+<p>Prefer to buy in person? Avika Retails is a computer hardware store at 103, 1st Floor, Vishal Bhawan, Nehru Place, New Delhi, where you can see stock and get build advice before you pay. <a href="https://maps.app.goo.gl/y7uGYKZSp1iwCMs46">Find us on Google Maps</a> or <a href="https://api.whatsapp.com/send?phone=919718336186">message us on WhatsApp</a> to check today's price and availability on any chip above, or to line up a full custom build.</p>
+
+<h2>Frequently asked questions</h2>
+
+<details class="avk-faq-item">
+  <summary>What is the AMD processor price range in India?</summary>
+  <p>At Avika Retails the current range runs from around ₹5,499 for the Ryzen 3 3200G APU up to ₹43,999 for the Ryzen 7 9800X3D gaming flagship, with the popular mid-range Ryzen 5 chips sitting between ₹12,000 and ₹20,000. Prices are point-in-time, so check each product page for today's figure.</p>
+</details>
+<details class="avk-faq-item">
+  <summary>Which AMD processor is best for gaming?</summary>
+  <p>For high-refresh gaming the X3D chips lead: the Ryzen 7 7800X3D (₹31,999) on AM5 and the Ryzen 7 5800X3D (₹35,999) on AM4. On a budget, the Ryzen 5 5600 (₹12,499) delivers the best gaming value in the whole lineup.</p>
+</details>
+<details class="avk-faq-item">
+  <summary>What is the AMD Ryzen 5 5600G and is it in stock?</summary>
+  <p>The Ryzen 5 5600G is a 6-core, 12-thread AM4 APU with Radeon Vega graphics, good for GPU-free 1080p esports. It is currently out of stock, so the in-stock buy is the near-identical Ryzen 5 5600GT at ₹15,999. See our AMD Ryzen 5 5600G review for the full details.</p>
+</details>
+<details class="avk-faq-item">
+  <summary>Should I buy an AM4 or AM5 AMD processor?</summary>
+  <p>Choose AM4 for the lowest total build cost, since DDR4 and B450/B550 boards are cheaper. Choose AM5 for a longer upgrade path and DDR5 support, since AMD plans to keep releasing new CPUs for the AM5 socket for several more generations.</p>
+</details>
+<details class="avk-faq-item">
+  <summary>Can I buy an AMD processor online from Avika Retails?</summary>
+  <p>Yes. Every chip on this page can be ordered online from avikaretails.com with delivery, or bought in person at our Nehru Place store in Delhi. You can also split the cost using Bajaj EMI on eligible orders.</p>
+</details>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the AMD processor price range in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At Avika Retails the current range runs from around ₹5,499 for the Ryzen 3 3200G APU up to ₹43,999 for the Ryzen 7 9800X3D gaming flagship, with the popular mid-range Ryzen 5 chips sitting between ₹12,000 and ₹20,000. Prices are point-in-time, so check each product page for today's figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AMD processor is best for gaming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For high-refresh gaming the X3D chips lead: the Ryzen 7 7800X3D (₹31,999) on AM5 and the Ryzen 7 5800X3D (₹35,999) on AM4. On a budget, the Ryzen 5 5600 (₹12,499) delivers the best gaming value in the whole lineup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the AMD Ryzen 5 5600G and is it in stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Ryzen 5 5600G is a 6-core, 12-thread AM4 APU with Radeon Vega graphics, good for GPU-free 1080p esports. It is currently out of stock, so the in-stock buy is the near-identical Ryzen 5 5600GT at ₹15,999. See our AMD Ryzen 5 5600G review for the full details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy an AM4 or AM5 AMD processor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose AM4 for the lowest total build cost, since DDR4 and B450/B550 boards are cheaper. Choose AM5 for a longer upgrade path and DDR5 support, since AMD plans to keep releasing new CPUs for the AM5 socket for several more generations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I buy an AMD processor online from Avika Retails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every chip on this page can be ordered online from avikaretails.com with delivery, or bought in person at our Nehru Place store in Delhi. You can also split the cost using Bajaj EMI on eligible orders."
+      }
+    }
+  ]
+}
+</script>
